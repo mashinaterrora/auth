@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+<meta charset="UTF-8">
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/brython@3.11.0/brython.min.js">
+    </script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/brython@3.11.0/brython_stdlib.js">
+    </script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="shapka.css">
+</head>
+<html>
+</head>
+<body onload="brython()">
+    <div class="form">
+        <h1>Вход</h1>
+        <div class="input-form">
+            <input type = "text" placeholder = "Логин">
+        </div>
+        <div class="input-form">
+            <input type = "password" placeholder = "Пароль">
+        </div>
+        <div class="input-form">
+            <input id="alert" type="submit" value="Войти">
+        </div>
+        <script type="text/python" id="script0">
+            from browser import document, console, alert
+
+            def show(e):
+                console.log("Hello");
+                alert("Ваша учётная запись заблокирована")
+
+                
+            document["alert"].bind("click", show)
+        </script>
+        <a href="#" class = "forgetpass">Забыли пароль?</a>
+    </div>
+</body>
+</html>
